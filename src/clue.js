@@ -7,7 +7,7 @@ const suspectsArray = [
         firstName: "Jacob",
         lastName: "Green",
         occupation: "Entrepreneur",
-        age: 45
+        age: 45,
         description: "He has a lot of connections",
         image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
         color: "green"
@@ -96,12 +96,26 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(cards) {
+    const randomNumber = Math.floor(Math.random() * cards.length);
+    return cards[randomNumber];
+}
 
-function pickMystery() {}
+function pickMystery() {
+    suspect = selectRandom(suspectsArray);
+    weapon = selectRandom(weaponsArray);
+    room = selectRandom(roomsArray);
+    
+    const mystery = {
+        suspect: suspect,
+        weapon: weapon,
+        room: room
+    }
+    
+    return mystery;
+}
 
 
 // ITERATION 3
 
 function revealMystery() {}
-
